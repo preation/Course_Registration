@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <!-- Fonts: Inter & JetBrains Mono for a tech UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Cache-busting query param forced CSS reload -->
+    <link rel="stylesheet" href="css/style.css?v=2.0">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <span class="logo-icon">&lt;/&gt;</span>
+            <span class="brand-title">UNIV_PORTAL </span>
+        </div>
+        <div class="system-status">
+            <span id="user-status" class="badge">STUDENT_SESSION</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Catalog View -->
+        <section id="catalog-view" class="view active">
+            <div class="hero-header">
+                <div>
+                    <h1>Active Course Catalog</h1>
+                    <p class="subtext">Select an engineering module to view Course specs and secure enrollment locks.</p>
+                </div>
+                <div class="metrics-bar">
+                    <div class="metric"><span class="metric-val" id="total-courses-count">3</span><span class="metric-lbl">ACTIVE_COURSES</span></div>
+                </div>
+            </div>
+
+            <div id="course-grid" class="grid"></div>
+        </section>
+
+        <!-- Course Detail View -->
+        <section id="detail-view" class="view hidden">
+            <button id="back-btn" onclick="showCatalog()">&larr; RETURN_TO_CATALOG</button>
+            <div id="course-content"></div>
+        </section>
+    </main>
+
+    <script src="js/app.js?v=2.0"></script>
+</body>
+</html>
