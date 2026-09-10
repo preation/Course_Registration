@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException, Depends, Header
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from dotenv import load_dotenv
 from supabase import create_client, Client
 
@@ -31,14 +31,14 @@ app.add_middleware(
 
 # --- Pydantic Data Models ---
 class SignUpRequest(BaseModel):
-    email: EmailStr
+    email: str
     password: str
     name: str
     age: int
     qualification: str
 
 class LoginRequest(BaseModel):
-    email: EmailStr
+    email: str
     password: str
 
 class RegistrationRequest(BaseModel):
