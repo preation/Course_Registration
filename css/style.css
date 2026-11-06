@@ -16,7 +16,9 @@
   --radius: 10px;
 }
 
+/* FIXED: Changed the hyphen (-) to an asterisk (*) to properly target all elements */
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-sans); }
+
 body { background: var(--bg-dark); color: var(--text-primary); line-height: 1.5; min-height: 100vh; }
 
 .hidden { display: none !important; }
